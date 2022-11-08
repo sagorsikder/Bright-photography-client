@@ -1,7 +1,10 @@
-import React from 'react';
+import {React,useContext} from 'react';
 import {Link} from 'react-router-dom'
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+  const{user,logOut}=useContext(AuthContext)
     return (
         <div className="navbar bg-base-300">
         <div className="navbar-start">
@@ -17,7 +20,7 @@ const Header = () => {
               <li><Link to='/events'>Event</Link></li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a href='/' className="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
@@ -30,10 +33,15 @@ const Header = () => {
         </div>
         <div className="navbar-end">
          
-          <button className='btn btn-primary'>Register</button>
-          <button className='btn btn-warning'>Admin</button>
+        { 
+           user?<button onClick={logOut} className='btn btn-dark'>Log out</button>:<>
+          <Link to='/register'><button className='btn btn-primary'>Register</button></Link>
+          <Link to='/login'><button className='btn btn-warning'>Login</button></Link>
+        </>
+          }
           <div className="w-10 rounded-full">
-          <img alt='user' src="https://www.automotivemanagementnetwork.com/wp-content/uploads/2021/05/AMN-052321-job-applicants-Depositphotos_358865920_xl-2015-scaled.jpg" />
+          <img alt='user' className='mx-3' src="https://www.automotivemanagementnetwork.com/wp-content/uploads/2021/05/AMN-052321-job-applicants-Depositphotos_358865920_xl-2015-scaled.jpg" />
+          <p className='mx-3 text-orange-600'>{user?.email}</p>
         </div>
         </div>
       </div>
