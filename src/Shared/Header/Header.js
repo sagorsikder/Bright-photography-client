@@ -16,19 +16,28 @@ const Header = () => {
               <li><Link to='/'>Home</Link></li>
               
               <li><Link to='/blog'>Blog</Link></li>
-              <li><Link to='/donation'>Donation</Link></li>
-              <li><Link to='/events'>Event</Link></li>
+           {
+            user?<>
+               <li><Link to='/myreviews'>My reviews</Link></li>
+              <li><Link to='/addservice'>Add service</Link></li>
+            </>:''
+           }
             </ul>
           </div>
-          <a href='/' className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <Link href='/' className="btn btn-ghost normal-case text-xl">Bright Photography</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
           <li><Link to='/'>Home</Link></li>
               
               <li><Link to='/blog'>Blog</Link></li>
-              <li><Link to='/donation'>Donation</Link></li>
-              <li><Link to='/events'>Event</Link></li>
+
+                {
+            user?<>
+               <li><Link to='/myreview'>My reviews</Link></li>
+              <li><Link to='/addservice'>Add service</Link></li>
+            </>:''
+           }
           </ul>
         </div>
         <div className="navbar-end">
