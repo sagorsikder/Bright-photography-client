@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ServiceCard = ({service}) => {
+const CategoryCard = ({category}) => {
 
-    const {_id,title,img,price} = service;
+    const {_id,title,img,price} = category;
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
   <figure><img src={img} alt="Shoes" /></figure>
@@ -18,4 +18,4 @@ const ServiceCard = ({service}) => {
     );
 };
 
-export default ServiceCard;
+export default CategoryCard;

@@ -1,12 +1,13 @@
 import React from 'react';
+import './bannerPart.css';
 
 const BannerPart = ({slide}) => {
 
     const {image,id,prev,next} = slide;
     return (
         <div id={`slide${id}`} className="carousel-item relative w-full">
-        <div className='carousel-image'>
-        <img src={image}alt='carusel img'  className="w-full" />
+        <div className='carousel-image w-full'>
+        <img src={image}alt='carusel img'  className="w-full carosel-pic" />
         </div>
     
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24  top-1/4">
