@@ -3,9 +3,11 @@ import Main from "../Layout/Main";
 import AddService from "../Pages/AddService/AddService";
 import Blog from "../Pages/Blog/Blog";
 import ErrorHandle from "../Pages/ErrorHandle/ErrorHandle";
+import Category from "../Pages/Home/Category/Caregory";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyReview from "../Pages/MyReview/MyReview";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
@@ -41,6 +43,14 @@ const router =  createBrowserRouter([
                 element:<PrivateRoutes>
                     <AddService></AddService>
                 </PrivateRoutes>
+            },
+            {
+                path:'/services',
+                element:<Category></Category>
+            },
+            {
+                path:'/services/:id',
+                element:<ServiceDetails></ServiceDetails>
             },
             {
                 path:'/*',

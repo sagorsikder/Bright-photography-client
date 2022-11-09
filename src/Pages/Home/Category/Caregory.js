@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import CategoryCard from './CategoryCard';
 
 const Category = () => {
@@ -25,6 +26,8 @@ const Category = () => {
                     categories.map(category =><CategoryCard key={category._id} category={category}></CategoryCard>)
                 }
             </div>
+
+           <Link to='/services'> <button className='btn btn-primary '>See All</button></Link>
         </div>
     );
 };
