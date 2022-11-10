@@ -58,27 +58,35 @@ const ServiceDetails = () => {
         <div className='border bg-warning p-6 '>
         <h1 className="text-5xl font-bold mb-7">Review Section</h1>
 
-        <h3 className='flex justify-between '><span>name: Sagor sikder</span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
+        <div className='border p-3'>
+        <h3 className='flex justify-between '><span>Name: Sagor sikder</span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
         
-        <p className='mb-7'>review : Your service is best ,awesome,gorgeous.</p>
+        <p className='mb-7'>Review : Your service is best ,awesome,gorgeous.</p>
+        </div>
 
-        <h3 className='flex justify-between '><span>name: Samrat </span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
+       <div  className='border p-3'>
+       <h3 className='flex justify-between '><span>Name: Samrat </span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
         
-        <p className='mb-7'>review : beautiful service ,thanks a lot.</p>
+        <p className='mb-7'>Review : beautiful service ,thanks a lot.</p>
+       </div>
 
-        <h3 className='flex justify-between '><span>name: Jankar mahbub</span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
+       <div  className='border p-3'>
+       <h3 className='flex justify-between '><span>Name: Jankar mahbub</span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
         
-        <p className='mb-7'>review : I need your service every happy new year. </p>
+        <p className='mb-7'>Review : I need your service every happy new year. </p>
+       </div>
 
 
         {
             user?<>
+        <div className='border p-3'>
         <h3 className='flex justify-between '><span>name: {user?.email}</span>  <img className='ms-5 w-7 h-7 rounded-full' src="https://th.bing.com/th/id/OIP.Gl-9JmXcclf3Xj2NmUWAYwHaNK?pid=ImgDet&rs=1" alt="" /></h3>
         
         <p className='mb-7'>{review} </p>
-
+        </div>
+            
         <form onSubmit={handleSubmit}>
-        <input className='px-3' placeholder='Enter your review' type="text" name="review" id="" />
+        <input className='px-3 my-3' placeholder='Enter your review' type="text" name="review" id="" />
         <br />
         <input placeholder='Enter your phone number' className='px-3' type="number" name="phone" id="" />
         <br />
@@ -89,14 +97,14 @@ const ServiceDetails = () => {
 
         </div>
           <div>
-            <h1 className="text-5xl font-bold">Service Section</h1>
-            <h1 className="text-3xl font-semibold">{title}</h1>
+            <h1 className="text-5xl text-primary my-5 font-bold">Service Details</h1>
+            <h1 className="text-3xl my-2 font-semibold">{title}</h1>
 
             <img src={img} alt="" />
             
-            <p className="py-6">{details}</p>
-            <p>{price}</p>
-            <button className="btn btn-primary">Get Started</button>
+            <p className="py-6 text-primary">Details: {details}</p>
+            <p className='text-primary'>Price : {price}</p>
+          
           </div>
         </div>
       </div>

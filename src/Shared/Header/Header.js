@@ -21,9 +21,10 @@ const Header = () => {
            {
             user?<>
                <li><Link to='/myreviews'>My reviews</Link></li>
-              <li><Link to='/addservice'>Add service</Link></li>
+             
             </>:''
            }
+            <li><Link to='/addservice'>Add service</Link></li>
             </ul>
           </div>
           <Link href='/' className="btn btn-ghost normal-case text-xl">Bright Photography</Link>
@@ -37,9 +38,10 @@ const Header = () => {
                 {
             user?<>
                <li><Link to='/myreview'>My reviews</Link></li>
-              <li><Link to='/addservice'>Add service</Link></li>
+             
             </>:''
            }
+            <li><Link to='/addservice'>Add service</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
@@ -50,9 +52,12 @@ const Header = () => {
           <Link to='/login'><button className='btn btn-warning'>Login</button></Link>
         </>
           }
-          <div className="w-10 rounded-full">
-          <img alt='user' className='mx-3' src="https://www.automotivemanagementnetwork.com/wp-content/uploads/2021/05/AMN-052321-job-applicants-Depositphotos_358865920_xl-2015-scaled.jpg" />
-          <p className='mx-3 text-orange-600'>{user?.email}</p>
+          <div className="w-10 h-3/4">
+          {
+          
+            user?<img alt='user' className='mx-3 h-3/4 rounded-3xl' src={user.photoURL?user.photoURL:'https://th.bing.com/th/id/R.98a25018b42419dd4188267e3345023f?rik=duLgA7T8SvBH7Q&riu=http%3a%2f%2fwww.brightstudio.com.sg%2fimages%2fPhotography%2fPassport%2fPicture%2fpassport15.jpg&ehk=nqMBFaMrS%2f8y3SHU6h%2bPwdo1MjMeshvFprGtriIwxb4%3d&risl=&pid=ImgRaw&r=0'} />:''
+          }
+          <p className='mx-3 text-orange-600'>{user?.displayName}</p>
         </div>
         </div>
       </div>

@@ -17,15 +17,17 @@ const MyReview = () => {
     return (
         <div className='w-3/4 mx-auto'>
             <h1 className='text-center text-5xl font-semibold bg-primary p-3 text-warning'> My reviews</h1>
-            {
-                user?.email
-            }
+            
+               <h1 className='mt-4'>{ user?.email}</h1>
+            
             <div>
-              
-              <img src={review[4]?.image} alt="" />
-                <h3>name: </h3>
+             <div className='my-5 bg-slate-400 rounded'>
+               
+             <img src={user.photoURL?user.photoURL:''} alt="" />
+                <h3>name:{user?.displayName} </h3>
                 <h3>email: {user?.email}</h3>
                 <h3>Total Review: {review.length}</h3>
+             </div>
                
 
 
@@ -39,8 +41,8 @@ const MyReview = () => {
         </label>
       </th>
       <th>Name</th>
-      <th>Job</th>
-      <th>Favorite Color</th>
+      <th>Category</th>
+      <th>Review</th>
       <th></th>
     </tr>
   </thead>

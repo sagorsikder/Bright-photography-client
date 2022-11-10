@@ -50,7 +50,7 @@ const bannerData = [
 
 const Banner = () => {
     return (
-        <div className="carousel pt-12 w-full">
+        <div className="carousel  w-full">
 
 
 {

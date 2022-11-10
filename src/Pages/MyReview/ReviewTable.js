@@ -32,7 +32,7 @@ const ReviewTable = (props) => {
           <br/>
           <span className="badge badge-ghost badge-sm">{serviceName}</span>
         </td>
-        <td><h1>{review}</h1>
+        <td><h1>review : {review}</h1>
         <button className='btn btn-warning w-2/4 h-2/4 text-xs'>Edit Review</button>
         </td>
         <th>
