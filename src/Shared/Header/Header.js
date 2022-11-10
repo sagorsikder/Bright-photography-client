@@ -1,3 +1,4 @@
+
 import {React,useContext} from 'react';
 import {Link} from 'react-router-dom'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
@@ -5,6 +6,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 const Header = () => {
 
   const{user,logOut}=useContext(AuthContext)
+  
     return (
         <div className="navbar px-4 bg-base-300">
         <div className="navbar-start">

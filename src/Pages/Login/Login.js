@@ -3,13 +3,26 @@ import {React,useContext} from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import image from '../../assets/images/login/login.svg'
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-  const{signIn} = useContext(AuthContext)
+  const {signIn,googleLogin} = useContext(AuthContext)
+const provider = new GoogleAuthProvider();
+
   const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
+    const google =()=>{
+
+      googleLogin(provider)
+      .then(result=>{
+        const user = result.user;
+        console.log(user)
+      })
+      .catch(err=>console.log(err))
+    }
 
   const handleLogin=(event)=>{
     event.preventDefault();
@@ -80,7 +93,7 @@ const Login = () => {
         </form>
 
 
-        
+        <button onClick={google} className='btn btn-warning'>Google</button>
        
       </div>
     </div>

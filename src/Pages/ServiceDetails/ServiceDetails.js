@@ -25,7 +25,8 @@ const ServiceDetails = () => {
             serviceId : _id,
             serviceName : title,
             review,
-            phone
+            phone,
+            image:img
            
 
         }
