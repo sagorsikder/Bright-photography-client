@@ -13,7 +13,7 @@ const Category = () => {
     },[])
 
     return (
-        <div>
+        <div className='w-5/6 mx-auto'>
             <div className='text-center'>
             <p className='text-xl font-bold text-orange-600'>services</p>
             <h2 className='font-bold text-5xl text-black my-4'>Our Service Category</h2>

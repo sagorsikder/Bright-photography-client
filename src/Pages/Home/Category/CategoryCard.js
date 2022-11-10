@@ -7,13 +7,13 @@ const CategoryCard = ({category}) => {
 
     const {_id,title,img,price} = category;
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card  card-compact w-96 bg-base-100 shadow-xl">
   <figure>
   
   
   <PhotoProvider>
       <PhotoView src={img} className='w-full h-96' alt="Shoes" >
-        <img src={img} alt="Shoes" />
+        <img className='w-full h-64' src={img} alt="Shoes" />
       </PhotoView>
     </PhotoProvider>
   
