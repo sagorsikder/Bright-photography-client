@@ -2,7 +2,7 @@ import {React,useContext} from 'react';
 
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
-import image from '../../assets/images/login/login.svg'
+
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
@@ -69,7 +69,7 @@ const provider = new GoogleAuthProvider();
   <div className="hero-content w-full flex-col my-5 lg:flex-row">
     <div className="text-center my-5 lg:text-left">
       
-      <img  src={image}  className='h-3/5 w-full p-3 '  alt="" />
+      <img  src='https://www.sehat.com/sht-new-img/new/login-new.png'  className='h-2/4 w-3/5 p-3 '  alt="" />
     </div>
     <div className="card flex-shrink-0 w-full my-5 py-5 max-w-sm shadow-2xl ">
       <div className="card-body">

@@ -38,7 +38,7 @@ const SignUp = () => {
   <div className="hero-content w-full flex-col my-5 lg:flex-row">
     <div className="text-center my-5 lg:text-left">
       
-      <img className='h-3/5 w-full p-3 ' src={image} alt="" />
+      <img className='h-3/4 w-3/4 p-3 ' src='https://th.bing.com/th/id/R.0bfb188ab99a5c96e0902ef48dace5bc?rik=hvv7LwqmLhW1Tw&riu=http%3a%2f%2fgocommunityapp.com%2fwp-content%2fuploads%2f2016%2f01%2fsign_up_blue.png&ehk=UjZZaJ6QTrbazF2XH8GvVJmBMRraWCJWg6gCF2P0LC0%3d&risl=&pid=ImgRaw&r=0' alt="" />
     </div>
     <div className="card flex-shrink-0 w-full my-5 py-5 max-w-sm shadow-2xl ">
       <div className="card-body">
