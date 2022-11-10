@@ -1,9 +1,11 @@
 import {React,useContext,useState} from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const ServiceDetails = () => {
 
+    useTitle('servicedetails')
     const{user}=useContext(AuthContext)
     const [review,setReview] = useState('')
 
@@ -31,7 +33,7 @@ const ServiceDetails = () => {
 
         }
 
-        fetch('http://localhost:5000/review',{
+        fetch('https://helping-network-server.vercel.app/review',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

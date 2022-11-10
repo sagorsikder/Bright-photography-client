@@ -7,7 +7,7 @@ const Category = () => {
 
     useEffect(()=>{
 
-        fetch('http://localhost:5000/minicategory')
+        fetch('https://helping-network-server.vercel.app/minicategory')
         .then(res => res.json())
         .then(data => setCategory(data))
     },[])

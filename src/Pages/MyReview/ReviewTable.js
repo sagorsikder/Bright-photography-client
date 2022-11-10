@@ -34,6 +34,9 @@ const ReviewTable = (props) => {
         </td>
         <td><h1>review : {review}</h1>
         <button className='btn btn-warning w-2/4 h-2/4 text-xs'>Edit Review</button>
+
+     
+        
         </td>
         <th>
           <button className="btn btn-ghost btn-xs">X</button>

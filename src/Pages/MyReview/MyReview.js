@@ -1,15 +1,18 @@
 import {React,useContext,useEffect,useState} from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 import ReviewTable from './ReviewTable';
 
 const MyReview = () => {
     const {user,logOut} = useContext(AuthContext);
     const [review,setReview]=useState([])
 
+    useTitle('myreview')
+
     console.log(review)
     useEffect(()=>{
      
-        fetch(`http://localhost:5000/myreview?email=${user.email}`)
+        fetch(`https://helping-network-server.vercel.app/myreview?email=${user.email}`)
         .then(res =>res.json())
         .then(data => setReview(data))
         .catch(err=>console.log(err))

@@ -9,6 +9,7 @@ import Roadmap from '../Roadmap/Roadmap';
 const Home = () => {
     return (
         <div>
+
            <Banner></Banner>
            <MiniCategory></MiniCategory>
            <About></About>

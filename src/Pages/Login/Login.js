@@ -4,12 +4,14 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
 
   const {signIn,googleLogin} = useContext(AuthContext)
 const provider = new GoogleAuthProvider();
 
+  useTitle('login')
   const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -41,7 +43,7 @@ const provider = new GoogleAuthProvider();
       }
 
       // jwt token acces
-      fetch('http://localhost:5000/jwt',{
+      fetch('https://helping-network-server.vercel.app/jwt',{
         method:'POST',
         headers:{
           'content-type':'application/json'

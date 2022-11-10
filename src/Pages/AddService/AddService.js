@@ -1,8 +1,10 @@
 import {React,useContext}from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const AddService = () => {
     const{user} = useContext(AuthContext)
+    useTitle('addservice')
 
     const handleForm=(event)=>{
 
@@ -10,9 +12,12 @@ const AddService = () => {
         const form = event.target;
         const serviceName = form.serviceName.value
         const serviceImage = form.serviceImage.value
+        const price = form.price.value;
+        const details = form.details.value;
 
+        alert('Service added successfully.')
 
-        console.log(serviceName,serviceImage)
+        console.log(serviceName,price,details,serviceImage)
     }
     return (
         <div className='w-3/4 mx-auto'>
@@ -25,6 +30,10 @@ const AddService = () => {
 
             <form onSubmit={handleForm}>
                 <input type="text" placeholder='service name ' name="serviceName" id="" />
+                <br />
+                <input type="text" placeholder='price ' name="price" id="" />
+                <br />
+                <input type="text" placeholder='description ' name="details" id="" />
                 <br />
                 <input type="text" placeholder='Service image' name='serviceImage' />
                 <br />

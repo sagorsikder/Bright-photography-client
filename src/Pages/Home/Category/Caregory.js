@@ -1,13 +1,14 @@
 import { React, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 import CategoryCard from './CategoryCard';
 
 const Category = () => {
     const [categories,setCategory] = useState([])
 
+    useTitle('services')
     useEffect(()=>{
 
-        fetch('http://localhost:5000/category')
+        fetch('https://helping-network-server.vercel.app/category')
         .then(res => res.json())
         .then(data => setCategory(data))
     },[])
