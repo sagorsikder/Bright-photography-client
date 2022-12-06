@@ -9,7 +9,7 @@ import useTitle from '../../Hooks/useTitle';
 const Login = () => {
 
   const {signIn,googleLogin} = useContext(AuthContext)
-const provider = new GoogleAuthProvider();
+
 
   useTitle('login')
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const provider = new GoogleAuthProvider();
     const from = location.state?.from?.pathname || '/';
 
     const google =()=>{
-
+      const provider = new GoogleAuthProvider();
       googleLogin(provider)
       .then(result=>{
         const user = result.user;
