@@ -99,13 +99,13 @@ const ServiceDetails = () => {
 
         </div>
           <div>
-            <h1 className="text-5xl text-primary my-5 font-bold">Service Details</h1>
+            <h1 className="text-5xl text-center text-primary my-5 font-bold">Service Details</h1>
             <h1 className="text-3xl my-2 font-semibold">{title}</h1>
 
             <img src={img} alt="" />
             
-            <p className="py-6 text-primary">Details: {details}</p>
-            <p className='text-primary'>Price : {price}</p>
+            <p className="py-6 font-semibold text-primary"><span className='text-yellow-800 font-bold'>Details: </span>{details}</p>
+            <p className='text-primary font-semibold '>Price : {price}</p>
           
           </div>
         </div>
